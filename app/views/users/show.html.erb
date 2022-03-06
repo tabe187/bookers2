@@ -1,0 +1,11 @@
+<%= render 'info', user: @user, book: @book %>
+
+<div>
+  <% @books.each do |book| %>    
+      <h1>Book detail</h1>
+      <p><%= image_tag book.user.get_profile_image(100,100) %></p>
+      <p>Title：<%= book.title %></p>
+      <p>Opinion：<%= book.body %></p>
+  <% end %>
+ </div>
+
